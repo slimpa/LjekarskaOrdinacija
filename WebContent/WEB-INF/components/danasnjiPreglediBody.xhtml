@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+	
+	</h:head>
+	
+	<h:body>
+		<h1>Danasnji pregledi</h1>
+		<br/>
+		<a href="radSaIzvjestajima.xhtml">Nazad</a>
+		<h:dataTable id="prikaz" var="termin"  value="#{terminDto.getByDate()}">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputText value="${termin.id}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Datum pregleda</f:facet>
+				<h:outputText value="${termin.datumPregleda}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Ime pacijenta</f:facet>
+				<h:outputText value="${termin.imePacijenta}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Prezime pacijenta</f:facet>
+				<h:outputText value="${termin.prezimePacijenta}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Ime doktora</f:facet>
+				<h:outputText value="${termin.imeDoktora}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Prezime doktora</f:facet>
+				<h:outputText value="${termin.prezimeDoktora}"></h:outputText>
+			</h:column>
+		</h:dataTable>	
+	</h:body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+	
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			<div style="position:absolute; top:50%; left:50%; margin:-25px 0 0 -250px;" id="login">
+				Unesite ime: 
+				<h:inputText id="username" value="#{doktorDto.username}"></h:inputText>
+				<br/>
+				Unesite lozinku:
+				<h:inputSecret id="password" value="#{doktorDto.password}"></h:inputSecret>
+				<br/>
+				<h:commandButton action="#{doktorDto.login()}" type="submit" value="Login"></h:commandButton>
+				<br/>
+				<br/>
+				<h:commandButton action="#{doktorDto.loginAsPatient()}" value="Nastavi kao pacijent"/>
+			</div>
+		</h:form>
+	</h:body>
+</html>

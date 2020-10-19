@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+	
+	</h:head>
+	
+	<h:body>
+		<h1>Registar doktora</h1>
+		<br/>
+		<a href="radSaTerminima.xhtml">Rad sa terminima</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a href="radSaIzvjestajima.xhtml">Rad sa izvjestajima</a>
+		<br/>
+		<br/>
+		<a href="registarPacijenata.xhtml">Pregled registra pacijenata</a>
+		<br/>
+		<a href="login.xhtml">Logout</a>
+		<br/>
+		<h3>Spisak doktora</h3>
+		<h:dataTable id="prikazDoktora" var="doktor"  value="#{doktorDto.getAll()}">
+			<h:column>
+				<f:facet name="header">Ime</f:facet>
+				<h:outputText value="${doktor.ime}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Prezime</f:facet>
+				<h:outputText value="${doktor.prezime}"></h:outputText>
+			</h:column>
+		</h:dataTable>
+	</h:body>
+</html>

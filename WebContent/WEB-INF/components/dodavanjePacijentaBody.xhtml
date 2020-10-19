@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+	
+	</h:head>
+	<h:body>
+		<h:form>
+			Unesite ime:
+			<h:inputText id="ime" value="#{pacijentDto.ime}"/>
+			<br/>
+			Unesite prezime: 
+			<h:inputText id="prezime" value="#{pacijentDto.prezime}"></h:inputText>
+			<br/>
+			Datum rodjenja:
+			<h:inputText id="datumRodjenja" value="#{pacijentDto.datumRodjenja}">
+				 <f:convertDateTime pattern="dd-mm-yyyy"/>  
+			</h:inputText>
+			<br/>
+			Adresa:
+			<h:inputText id="adresa" value="#{pacijentDto.adresa}"></h:inputText>
+			<br/>
+			Telefon:
+			<h:inputText id="telefon" value="#{pacijentDto.telefon}"></h:inputText>
+			<br/>
+			<h:commandButton action="#{pacijentDto.insert()}" value="Dodaj"></h:commandButton>
+		</h:form>
+		<a href="registarPacijenata.xhtml">Nazad</a>
+	</h:body>
+</html>

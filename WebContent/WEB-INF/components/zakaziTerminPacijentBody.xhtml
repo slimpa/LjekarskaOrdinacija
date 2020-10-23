@@ -13,7 +13,7 @@
 	<h:body>
 		<h1>Dodavanje termina pregleda</h1>
 		
-		<a href="radSaTerminima.xhtml">Nazad</a>
+		<a href="pacijentHome.xhtml">Nazad</a>
 		<br/>
 		<br/>
 		<br/>
@@ -34,7 +34,7 @@
 				<f:selectItems value="#{doktorDto.getAllString()}"/>
 			</h:selectOneMenu>
 			<br/>
-			<h:commandButton  action="#{terminDto.createTermin()}" value="Kreiraj termin" ></h:commandButton>
+			<h:commandButton  action="#{terminDto.createTerminPacijent()}" value="Kreiraj termin" ></h:commandButton>
 		</h:form>
 	</h:body>
 </html>

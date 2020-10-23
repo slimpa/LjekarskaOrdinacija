@@ -4,9 +4,17 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <head>
   <title><ui:insert name="title">Registar pacijenata</ui:insert></title>
+  <style>
+	body{
+		  background-image: url("klinika.jpg");
+		  background-repeat: no-repeat;  
+		  background-position: top;
+		  
+	}
+  </style>
 </head>
 
-<body>
+<body >
 <ui:debug hotkey="x" rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}"/>
 
 <div id="header">
@@ -18,7 +26,7 @@
 </div>
 
 
-<div id="content">
+<div id="content" class="tijelo">
   <ui:insert name="content">
     	Content area.  See comments below this line in the source.
     	<!--  include your content file or uncomment the include below and create content.xhtml in this directory -->

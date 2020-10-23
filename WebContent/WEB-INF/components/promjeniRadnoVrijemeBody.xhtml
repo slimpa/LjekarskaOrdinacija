@@ -11,14 +11,11 @@
 	</h:head>
 	
 	<h:body>
-		<h1>Rad sa izvjestajima</h1>
-		
-		<a href="registarDoktora.xhtml">Nazad</a>
-		<br/>
-		<a href="danasnjiPregledi.xhtml">Danasnji Pregledi</a>
-		<br/>
-		<a href="preglediPoDatumu.xhtml">Pregledaj po datumu</a>
-		<br/>
-		<a href="">Neki drugi pregledi</a>
+		<h:form>
+			Unesite novo radno vrijeme:
+			<h:inputText id="prezime" value="#{ustanovaDto.radnoVrijeme}"></h:inputText>
+			<br/>
+			<h:commandButton action="#{ustanovaDto.promjeni()}" value="Promjeni"></h:commandButton>
+		</h:form>
 	</h:body>
 </html>

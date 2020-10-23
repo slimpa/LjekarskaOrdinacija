@@ -56,6 +56,12 @@ CREATE TABLE `pacijent`.`pregled` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
  
+    
+CREATE TABLE `pacijent`.`ustanova` (
+  `idUstanove` INT NOT NULL AUTO_INCREMENT,
+  `radnoVrijeme` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idUstanove`));
+
   
 ENGINE = InnoDB;
 

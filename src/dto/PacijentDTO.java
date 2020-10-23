@@ -118,14 +118,26 @@ public class PacijentDTO {
 		
 		System.out.println(this.ime + this.prezime+ this.adresa);
 		PacijentDAO.insertPacijent(this);
-		return "registarPacijenata.xhtml?faces-redirect-true";
+		return "registarPacijenata.xhtml?faces-redirect=true";
 	}
 	
-	public void delete() {
-		System.out.println("obrisi");
+	public void delete(PacijentDTO p) {
+		PacijentDAO.deletePacijent(p);
 	}
 	
-	public void modify() {
-		System.out.println("modifikuj");
+	public String modify(PacijentDTO p) {
+		this.setIdPacijent(p.getIdPacijent());
+		this.setIme(p.getIme());
+		this.setPrezime(p.getPrezime());
+		this.setDatumRodjenja(p.getDatumRodjenja());
+		this.setAdresa(p.getAdresa());
+		this.setTelefon(p.getTelefon());
+		return "modifikujPacijenta.xhtml?faces-redirect=true";
+	}
+	
+	public String update() {
+		System.out.println(this.idPacijent+this.ime + this.prezime+ this.adresa);
+		PacijentDAO.update(this);
+		return "registarPacijenata.xhtml?faces-redirect=true";
 	}
 }
